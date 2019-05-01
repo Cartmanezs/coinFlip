@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="coin_flip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aB6-no-E34">
+                                <rect key="frame" x="115.5" y="243" width="183" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Frh-8j-YZZ"/>
+                                    <constraint firstAttribute="width" constant="183" id="Ms2-Mg-CUZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Flip coin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCoinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q6B-CB-586"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aij-gm-YZD">
+                                <rect key="frame" x="41" y="299.5" width="332" height="307"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="307" id="ekI-8P-tqC"/>
+                                    <constraint firstAttribute="width" constant="332" id="sjM-KP-234"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xa-GX-UW3">
+                                <rect key="frame" x="157" y="614" width="100" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="msm-rb-2bF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22290676832199097" green="0.23840636014938354" blue="0.28407546877861023" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aB6-no-E34" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wzh-EJ-sPe"/>
+                            <constraint firstItem="8xa-GX-UW3" firstAttribute="top" secondItem="aij-gm-YZD" secondAttribute="bottom" constant="7.5" id="Y1r-Vm-Oss"/>
+                            <constraint firstItem="8xa-GX-UW3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cSw-T4-kuv"/>
+                            <constraint firstItem="aij-gm-YZD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kqB-pY-3TJ"/>
+                            <constraint firstItem="aij-gm-YZD" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="sbk-dJ-NCH"/>
+                            <constraint firstItem="aij-gm-YZD" firstAttribute="top" secondItem="aB6-no-E34" secondAttribute="bottom" constant="8.5" id="toI-gn-F2d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="coinLabel" destination="8xa-GX-UW3" id="BQX-kt-lfw"/>
+                        <outlet property="imageViewOutlet" destination="aij-gm-YZD" id="0i0-vJ-KHw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.75" y="101.25"/>
+        </scene>
+    </scenes>
+</document>
