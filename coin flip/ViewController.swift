@@ -22,7 +22,6 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
             self.flipCoin()
         }
-        //flipCoin()
     }
     
     override func viewDidLoad() {
@@ -30,9 +29,8 @@ class ViewController: UIViewController {
         coinLabel.text = ""
         imageViewOutlet.image = UIImage(named: "heads")
         createCoinImagesArray(count: 53, name: "Coin")
-        // Do any additional setup after loading the view.
     }
-
+    //MARK: Generate random coin
     func flipCoin(){
         let coins = [1,2]
         if let coin = coins.randomElement(){
@@ -40,14 +38,14 @@ class ViewController: UIViewController {
             coin == 1 ? (imageViewOutlet.image = UIImage(named: "heads")) : (imageViewOutlet.image = UIImage(named: "tails"))
         }
     }
-    
+    //MARK: Create an array for coin images
     func createCoinImagesArray(count: Int, name: String){
         for i in 1...count{
             let imageName = UIImage(named: "\(name)\(i)")
             coinImageArray.append(imageName!)
         }
     }
-    
+    //MARK: Animation for coin
     func flipCoinImages(imageView: UIImageView, images: [UIImage]){
         imageView.animationImages = images
         imageView.animationDuration = 1
